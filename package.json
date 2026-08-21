@@ -20,7 +20,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc -p tsconfig.lib.json",
+    "build": "tsc -p tsconfig.app.json && vite build",
+    "build:lib": "BUILD_TARGET=lib vite build && tsc -p tsconfig.lib.json",
     "preview": "vite preview"
   },
   "peerDependencies": {
